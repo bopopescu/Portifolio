@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Login {% endblock %}
+{% block content %}
+
+<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
+
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="{% static 'sign-in/signin.css' %}" rel="stylesheet">
+
+<body class="text-center">
+  <form class="form-signin" method="POST">
+    {% csrf_token %}
+<img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+<label for="inputEmail" class="sr-only">Login</label>
+<input type="text" id="inputEmail" class="form-control" placeholder="Login" name="login_form" required autofocus>
+<label for="inputPassword" class="sr-only">Senha</label>
+<input type="password" id="inputPassword" class="form-control" placeholder="Senha" name="senha_form" required>
+<div class="checkbox mb-3">
+  <label>
+    <input type="checkbox" value="remember-me"> Remember me
+  </label>
+</div>
+<button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+<p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+</form>
+
+</body>
+  {% endblock %}
+
+  
