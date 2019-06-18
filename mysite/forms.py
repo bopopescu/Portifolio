@@ -6,3 +6,13 @@ class LoginForm(forms.ModelForm):
     senha_form = forms.Charfield(max_length=20)
 
 
+class CadastroForm(forms.ModelForm):
+nome = forms.CharField(max_length=50)
+login = forms.CharField(max_length=20)
+senha = forms.CharField(max_length=20)
+    class Meta:
+    	fields = ('nome', 'login', 'senha')
+    	models = Usuario
+
+	
+		

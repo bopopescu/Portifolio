@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from mysite.models import Usuario
 
 # Create your views here.
 
@@ -10,6 +11,11 @@ def login(request):
     form = ()
     context = {}
     return render(request, "login.html", context)
+
+def cadastro(request):
+    form = ()
+    context = {}
+    return render(request, "cadastro.html", context)
 
 def signin(request):
     usuario = Usuario.objects.all()
