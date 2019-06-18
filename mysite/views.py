@@ -1,5 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import UsuarioCreateForm
 from mysite.models import Usuario
+from django.http import HttpResponse
+from django.contrib import messages
+import datetime
 
 # Create your views here.
 
@@ -8,24 +12,18 @@ def index(request):
     return render(request, "index.html", context)
 
 def login(request):
-    form = ()
     context = {}
     return render(request, "login.html", context)
 
 def cadastro(request):
-    form = ()
     context = {}
     return render(request, "cadastro.html", context)
 
-def signin(request):
-    usuario = Usuario.objects.all()
+def logedin(request):
+    if request.session.has_key('username'):
+        return True
+    return False
 
-    if request.method =="POST":
-        if form.is_valid():
-            n = form.cleaned_data.get('login')
-            s = form.cleaned_data.get('senha')
-
-            for usuario in usuario:
-                if (usuario.login == n ) and (usuario.senha == s):
-                    return redirect ('home.html')
-    return render(request, 'login.html')
+def logout(request):
+    request.session.flush()
+    return redirect('login')

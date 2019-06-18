@@ -1,11 +1,47 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Bechelli Devs. {% endblock %}
+{% block title %} Cadastro {% endblock %}
 {% block content %}
 
-<body>
-	
-	{{form.CadastroForm}}
+<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+
+<body>	
+	<style>
+    #signinbuton {
+        display: block;
+        margin: auto;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+</style>
+	<div class="content-section container">
+    <p style="text-align: center"><i class="large material-icons grey-text">account_box</i></p>
+    <h3 class="h3 mb-3 font-weight-normal">Please sign up</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom"></legend>
+            {{ form }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit" id="signinbuton">
+                Sign up
+            </button>
+        </div>
+    </form>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            already have an account? <a href="{% url 'login' %}" s>signin</a>
+        </small>
+    </div>
+</div>
 
 </body>
 
