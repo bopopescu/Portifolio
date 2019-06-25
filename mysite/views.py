@@ -4,12 +4,23 @@ from mysite.models import Usuario
 from django.http import HttpResponse
 from django.contrib import messages
 import datetime
+from .models import Portifolio
 
 # Create your views here.
 
 def index(request):
-    context = {}
+    portifolio = Portifolio.objects.all()
+    context = {
+        'portifolio': portifolio
+    }
     return render(request, "index.html", context)
+
+def portifolio_sites(request):
+    portifolio = Portifolio.objects.all()
+    context = {
+        'portifolio': portifolio
+    }
+    return render(request, "portifolio_sites.html", context)
 
 def login(request):
     context = {}
