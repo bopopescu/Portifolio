@@ -22,6 +22,10 @@ def portifolio_sites(request):
     }
     return render(request, "portifolio_sites.html", context)
 
+def sobre(request):
+    context = {}
+    return render(request, "sobre.html", context)
+
 def login(request):
     context = {}
     return render(request, "login.html", context)

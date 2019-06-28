@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Bechelli Devs. {% endblock %}
+{% block content %}
+
+<body>
+	
+<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+    	 h2{
+        color: #ffff;
+      }
+      body{
+        background-color: #323436;
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">BECHELLI DEVS.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre">SOBRE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portifolio">PORTIFOLIO</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">CONTATO</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+	</header>
+
+	<!-- Sobre o Profisional -->
+
+	<style>
+        .lead{
+          color: #ffff;
+        }
+        .sobre{
+          color: #ffff;
+          font-family: Tahoma-sans-serif;
+          font-size: 60px;
+        }
+        .nome{
+          color: #ffff;
+          font-family: Tahoma-sans-serif;
+          font-size: 40px;
+        }
+      </style>
+      
+      <div class="container marketing">
+      <div>
+    <center><h2 class="sobre">Sobre</h2></center>
+          <br> <br> <br>
+          <p class="nome">
+            Anderson Bechelli
+          </p>
+          <p class="lead">
+            Programador e desenvolvedor, atualmente estudante de Análise e Desenvolvimento de Sistemas na Faculdade de Tecnologia de Indaiatuba - FATEC ID. <br> <br>
+
+Teve início na carreira de análise de sistemas em 2019 em um construtora na cidade de Indaiatuba, onde trabalhou como estagiário. Possui vontade de aprender cada vez mais sobre diversas tecnologias da área e está sempre pronto a desafios. <br> <br>
+
+Principais linguagens: Python  | HTML/CSS  | JavaScript | NodeJS | React/ReactNative | Java | SQL | MySQL | SQLite3
+          </p>
+          </div> </div>
+
+    
+
+</body>
+{% endblock%}
