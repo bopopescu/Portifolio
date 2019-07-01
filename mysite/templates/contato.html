@@ -62,11 +62,13 @@
   <!-- Formulário de contato -->
 
   <form method="POST">{% csrf_token %}
-  		
-  		{{ form.as_p }}
+    <br><br>
+    <div class="form-group">
 
-  	<button type="submit">Contate-nos Já</button>
+      {{ form.as_p }}
 
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 
 </body>
