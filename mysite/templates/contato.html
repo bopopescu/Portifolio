@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Bechelli Devs. {% endblock %}
+{% block content %}
+
+<body>
+	
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
+
+<body>
+
+  <!-- Navbar -->
+
+    <style>
+      h2{
+        color: #ffff;
+      }
+      body{
+        background-color: #323436;
+      }
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+      </style>
+        <link href="{% static 'carousel/carousel.css' %}" rel="stylesheet">
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="home">BECHELLI DEVS.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre">SOBRE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portifolio">PORTIFOLIO</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="contato">CONTATO</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Formulário de contato -->
+
+  <form method="POST">{% csrf_token %}
+  		
+  		{{ form.as_p }}
+
+  	<button type="submit">Contate-nos Já</button>
+
+  </form>
+
+</body>
+
+{% endblock %}

@@ -37,3 +37,18 @@ class Portifolio(models.Model):
 	class meta:
 		verbose_name = 'Portifolio'
 		verbose_name_plural = 'Portifolios'
+
+class Contato(models.Model):
+	id_contato = models.AutoField(primary_key=True)
+	email = models.CharField(max_length=50)
+	nome = models.CharField(max_length=50)
+	telefone = models.CharField(max_length=15)
+	celular = models.CharField(max_length=15)
+	mensagem = models.TextField('Mensagem',max_length= 300, blank=True)
+
+	def __str__(self):
+		return self.nome
+
+	class meta:
+		verbose_name= 'Contato'
+		verbose_name_plural = 'Contatos'

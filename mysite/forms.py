@@ -1,5 +1,5 @@
-from django import forms 
-from .models import Usuario
+from django import forms
+from .models import Usuario, Contato
 
 class UsuarioCreateForm(forms.Form):
     
@@ -9,3 +9,13 @@ class UsuarioCreateForm(forms.Form):
     class meta:
         fields = ('nome', 'login', 'senha')
         model = Usuario
+
+class ContatoForm(forms.Form):
+	email = forms.CharField(label='Email ',max_length=50)
+	nome = forms.CharField(label='Nome ',max_length=50)
+	Telefone = forms.CharField(label='Telefone ',max_length=15)
+	Celular = forms.CharField(label='Celular ',max_length=15)
+	mensagem = forms.CharField(label='Mensagem ',max_length=300)
+	class meta:
+		model = Contato
+		fields = ('email', 'nome', 'telefone', 'celular', 'mensagem')
