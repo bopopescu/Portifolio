@@ -59,12 +59,15 @@
     </nav>
   </header>
 
+
   <!-- Formulário de contato -->
 
   <form method="POST">
     <br><br>
     {% csrf_token %}
     <div class="form-group">
+      <p style="color: blue">SUA MENSAGEM DE CONTATO FOI ENVIADA COM SUCESSO. OBRIGADO</p>
+      <br><br>
       <table>
         <tbody>
           {{ form.as_table }}
@@ -77,5 +80,4 @@
   </form>
 
 </body>
-
-{% endblock %}
+  {% endblock %}

@@ -15,5 +15,5 @@ class ContatoForm(forms.Form):
 	nome = forms.CharField(label='Nome ',max_length=50)
 	Telefone = forms.CharField(label='Telefone ',max_length=15)
 	Celular = forms.CharField(label='Celular ',max_length=15)
-	mensagem = forms.CharField(label='Mensagem ',max_length=300)
+	mensagem = forms.CharField(label='Mensagem ', widget = forms.Textarea, max_length=300)
 	
