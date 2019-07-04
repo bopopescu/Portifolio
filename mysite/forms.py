@@ -16,6 +16,4 @@ class ContatoForm(forms.Form):
 	Telefone = forms.CharField(label='Telefone ',max_length=15)
 	Celular = forms.CharField(label='Celular ',max_length=15)
 	mensagem = forms.CharField(label='Mensagem ',max_length=300)
-	class meta:
-		model = Contato
-		fields = ('email', 'nome', 'telefone', 'celular', 'mensagem')
+	
