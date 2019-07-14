@@ -1,4 +1,5 @@
 from django import forms
+from django.conf import settings
 from .models import Usuario, Contato
 
 class UsuarioCreateForm(forms.Form):
@@ -16,4 +17,3 @@ class ContatoForm(forms.Form):
 	Telefone = forms.CharField(label='Telefone ',max_length=15)
 	Celular = forms.CharField(label='Celular ',max_length=15)
 	mensagem = forms.CharField(label='Mensagem ', widget = forms.Textarea, max_length=300)
-	

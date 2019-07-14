@@ -121,3 +121,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'Portifolio', 'media')
 MEDIA_URL = '/media/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.Email.Backend'
+DEFAULT_FROM_EMAIL = 'Nome <anderson.bechelli@gmail.com>'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'anderson.bechelli@gmail.com'
+EMAIL_HOST_PASWORD = 'Amatsumagatsuchi'
+EMAIL_PORT = 587
+
+CONTACT_EMAIL = 'anderson.bechelli@gmail.com'
